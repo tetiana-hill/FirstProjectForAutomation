@@ -24,9 +24,12 @@ public class FirstTestForHW27 {
 
     @Test
     public void testGoogle() throws InterruptedException, IOException {
-        WebElement searchInput = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
-        searchInput.sendKeys("For My First Test");
-        WebElement searchBtn = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]"));
+//        WebElement searchInput = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
+        WebElement searchInput = driver.findElement(By.name("q"));
+        searchInput.sendKeys("First Test");
+//        WebElement searchBtn = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]"));
+//        WebElement searchBtn = driver.findElement(By.id("SIvCob"));
+        WebElement searchBtn = driver.findElement(By.xpath("(//input[@name='btnK'])[2]"));
         searchBtn.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
     }
