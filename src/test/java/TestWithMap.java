@@ -30,7 +30,7 @@ public class TestWithMap {
     }
 
     @Test
-    public void rozetka() throws IOException {
+    public void rozetkaTest() throws IOException {
         WebElement search = driver.findElement(By.name("search"));
         search.sendKeys("Mac");
 
